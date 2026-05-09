@@ -1,0 +1,85 @@
+.page { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.pageTitle { font-size: 24px; font-weight: 800; color: var(--a-text); margin-bottom: 24px; }
+
+/* Stat cards */
+.statsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;
+}
+@media (max-width: 1200px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .statsGrid { grid-template-columns: 1fr; } }
+
+.statCard {
+  background: #fff; border-radius: 14px; padding: 20px;
+  box-shadow: var(--shadow); border-left: 4px solid transparent;
+  transition: transform 0.2s; cursor: default;
+}
+.statCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.blue   { border-left-color: #2563eb; }
+.indigo { border-left-color: #6366f1; }
+.orange { border-left-color: #f59e0b; }
+.purple { border-left-color: #8b5cf6; }
+
+.statTop   { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.statLabel { font-size: 11px; font-weight: 700; color: var(--a-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.statValue { font-size: 32px; font-weight: 800; color: var(--a-text); font-family: var(--font-mono); line-height: 1; }
+.blue   .statValue { color: #2563eb; }
+.indigo .statValue { color: #6366f1; }
+.orange .statValue { color: #f59e0b; }
+.purple .statValue { color: #8b5cf6; }
+.statIcon { color: var(--a-text-muted); opacity: 0.5; }
+.statSub  { font-size: 12px; color: var(--a-text-muted); }
+.statSub2 { font-size: 12px; color: var(--a-text-muted); margin-top: 2px; }
+
+/* Columns */
+.cols { display: grid; grid-template-columns: 1fr 320px; gap: 20px; }
+@media (max-width: 1024px) { .cols { grid-template-columns: 1fr; } }
+
+/* Table card */
+.tableCard {
+  background: #fff; border-radius: 14px; padding: 20px;
+  box-shadow: var(--shadow);
+}
+.cardTitle { font-size: 16px; font-weight: 700; color: var(--a-text); margin-bottom: 16px; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left; padding: 10px 12px; font-size: 11px; font-weight: 700;
+  color: var(--a-text-muted); text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--a-border); background: #f8fafc;
+}
+.table td { padding: 12px 12px; border-bottom: 1px solid var(--a-border); color: var(--a-text); vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: #f8fafc; }
+
+.qNum {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+  color: var(--a-primary-light); background: #dbeafe; padding: 3px 8px; border-radius: 6px;
+}
+.timeCell { color: var(--a-text-muted); font-size: 12px; white-space: nowrap; }
+.empty { text-align: center; color: var(--a-text-muted); font-size: 13px; padding: 24px 0; }
+
+.viewAllBtn {
+  display: block; width: 100%; margin-top: 16px; padding: 10px;
+  background: transparent; border: 1.5px solid var(--a-border); border-radius: 10px;
+  font-size: 13px; font-weight: 600; color: var(--a-primary-light); cursor: pointer;
+  transition: all 0.2s;
+}
+.viewAllBtn:hover { background: #eff6ff; border-color: var(--a-primary-light); }
+
+/* Schedule */
+.scheduleCard {
+  background: #fff; border-radius: 14px; padding: 20px; box-shadow: var(--shadow);
+}
+.scheduleList { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+.scheduleItem { display: flex; gap: 14px; align-items: flex-start; }
+.schedDot {
+  width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px;
+}
+.active  { background: #10b981; }
+.break   { background: #94a3b8; }
+.done    { background: #e2e8f0; }
+.schedTime  { font-size: 13px; font-weight: 700; color: var(--a-text); }
+.schedLabel { font-size: 12px; color: var(--a-text-muted); margin-top: 2px; }

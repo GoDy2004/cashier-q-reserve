@@ -1,0 +1,63 @@
+.page { min-height: 100vh; background: var(--s-bg); }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 52px 16px 16px; background: #fff;
+  border-bottom: 1px solid var(--s-border);
+}
+.header h1 { font-size: 17px; font-weight: 700; color: var(--s-text); }
+.back {
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: #f5f3ff; color: var(--s-primary-light);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+.searchWrap {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid var(--s-border);
+  border-radius: 10px; padding: 10px 14px; margin: 14px 16px 0;
+}
+.searchInput { flex: 1; border: none; font-size: 14px; color: var(--s-text); background: transparent; }
+.searchInput::placeholder { color: #9ca3af; }
+
+.tabs {
+  display: flex; gap: 6px; padding: 12px 16px;
+  overflow-x: auto; background: var(--s-bg);
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 6px 14px; border-radius: 99px; font-size: 13px; font-weight: 500;
+  border: 1px solid var(--s-border); background: #fff; color: var(--s-text-muted);
+  white-space: nowrap; cursor: pointer; transition: all 0.15s;
+}
+.tabActive { background: var(--s-primary-light); color: #fff; border-color: var(--s-primary-light); }
+
+.list { padding: 0 16px 24px; display: flex; flex-direction: column; gap: 10px; }
+
+.item {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #fff; border-radius: var(--radius-sm); padding: 14px;
+  box-shadow: var(--shadow); gap: 12px;
+}
+.itemLeft  { display: flex; align-items: center; gap: 12px; }
+.itemRight { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+.itemIcon    { font-size: 24px; }
+.itemService { font-size: 14px; font-weight: 600; color: var(--s-text); }
+.itemMeta    { font-size: 12px; color: var(--s-text-muted); margin-top: 2px; }
+.itemQueue   { font-size: 13px; font-weight: 700; color: var(--s-primary-light); font-family: var(--font-mono); }
+
+.statusBadge {
+  font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 99px;
+}
+.completed { background: #d1fae5; color: #065f46; }
+.pending   { background: #fef3c7; color: #92400e; }
+.cancelled { background: #fee2e2; color: #991b1b; }
+.verified  { background: #dbeafe; color: #1e40af; }
+
+.empty {
+  text-align: center; padding: 48px 20px;
+  color: var(--s-text-muted);
+}
+.empty span { font-size: 40px; display: block; margin-bottom: 8px; }
+.empty p    { font-size: 14px; }

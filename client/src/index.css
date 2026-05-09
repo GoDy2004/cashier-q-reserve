@@ -1,0 +1,103 @@
+/* ─── Design Tokens ─────────────────────────────────── */
+:root {
+  /* Student UI — Purple/violet palette */
+  --s-primary: #5b21b6;
+  --s-primary-light: #7c3aed;
+  --s-primary-dark: #4c1d95;
+  --s-accent: #8b5cf6;
+  --s-bg: #f5f3ff;
+  --s-card: #ffffff;
+  --s-text: #1e1b4b;
+  --s-text-muted: #6b7280;
+  --s-border: #e5e7eb;
+  --s-success: #10b981;
+  --s-warning: #f59e0b;
+  --s-danger: #ef4444;
+
+  /* Admin UI — Navy/blue palette */
+  --a-primary: #1e3a5f;
+  --a-primary-light: #2563eb;
+  --a-sidebar: #1a2e4a;
+  --a-sidebar-active: #2563eb;
+  --a-bg: #f0f4f8;
+  --a-card: #ffffff;
+  --a-text: #0f172a;
+  --a-text-muted: #64748b;
+  --a-border: #e2e8f0;
+  --a-success: #10b981;
+  --a-warning: #f59e0b;
+  --a-danger: #ef4444;
+  --a-pending: #f59e0b;
+  --a-approved: #10b981;
+  --a-cancelled: #ef4444;
+
+  --font: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+}
+
+/* ─── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font);
+  background: #f5f5f5;
+  color: #1e1b4b;
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font); border: none; outline: none; }
+input, select, textarea { font-family: var(--font); outline: none; }
+
+/* ─── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 99px; }
+
+/* ─── Utility ────────────────────────────────────────── */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ─── Animations ─────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes popIn {
+  0%   { transform: scale(0.8); opacity: 0; }
+  70%  { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.fade-in  { animation: fadeIn 0.4s ease both; }
+.slide-up { animation: slideUp 0.4s ease both; }
+
+/* ─── Loading skeleton ───────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}

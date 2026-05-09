@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--s-border);
+  gap: 12px;
+}
+
+.left  { display: flex; align-items: center; gap: 12px; }
+.right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--s-primary-light);
+  background: #ede9fe;
+  padding: 6px 10px;
+  border-radius: 8px;
+  min-width: 64px;
+  text-align: center;
+}
+
+.name    { font-weight: 600; font-size: 14px; color: var(--s-text); }
+.service { font-size: 12px; color: var(--s-text-muted); margin-top: 2px; }
+.time    { font-size: 12px; color: var(--s-text-muted); }
+
+.actions { display: flex; gap: 6px; }
+
+/* Badges */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 99px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.waiting   { background: #fef3c7; color: #92400e; }
+.serving   { background: #d1fae5; color: #065f46; }
+.done      { background: #e0e7ff; color: #3730a3; }
+.skipped   { background: #f3f4f6; color: #6b7280; }
+.cancelled { background: #fee2e2; color: #991b1b; }
+.pending   { background: #fef3c7; color: #92400e; }
+.approved  { background: #d1fae5; color: #065f46; }

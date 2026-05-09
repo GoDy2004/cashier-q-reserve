@@ -1,0 +1,72 @@
+.page { min-height: 100vh; background: var(--s-bg); }
+
+.profileHeader {
+  background: linear-gradient(160deg, #5b21b6 0%, #7c3aed 100%);
+  padding: 52px 20px 36px;
+  text-align: center;
+  position: relative;
+}
+
+.avatarWrap { display: inline-block; position: relative; margin-bottom: 12px; }
+.avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; font-weight: 700; color: #fff;
+  border: 3px solid rgba(255,255,255,0.5);
+  margin: 0 auto;
+}
+.cameraBtn {
+  position: absolute; bottom: 0; right: -4px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #fff; border: none; font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.name { font-size: 20px; font-weight: 700; color: #fff; }
+.meta { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 4px; }
+
+.content { padding: 20px 16px; }
+
+.section { margin-bottom: 20px; }
+.sectionTitle { font-size: 13px; font-weight: 700; color: var(--s-text); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.menuCard {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.menuItem {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; background: transparent; border: none; cursor: pointer;
+  transition: background 0.15s;
+}
+.menuItem:hover { background: #f9fafb; }
+.menuItemBorder { border-bottom: 1px solid var(--s-border); }
+.menuLeft  { display: flex; align-items: center; gap: 12px; }
+.menuIcon  { font-size: 18px; }
+.menuLabel { font-size: 14px; font-weight: 500; color: var(--s-text); }
+
+.logoutBtn {
+  width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px; background: #fff; border: 1.5px solid #ef4444;
+  border-radius: var(--radius); font-size: 14px; font-weight: 600;
+  color: #ef4444; cursor: pointer; transition: all 0.2s;
+}
+.logoutBtn:hover { background: #fee2e2; }
+
+.confirmWrap {
+  background: #fff; border-radius: var(--radius); padding: 20px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.confirmWrap p { font-size: 14px; color: var(--s-text); margin-bottom: 14px; font-weight: 500; }
+.confirmBtns   { display: flex; gap: 10px; }
+.cancelBtn {
+  flex: 1; padding: 11px; background: #f3f4f6; border: none; border-radius: 10px;
+  font-size: 14px; font-weight: 600; color: var(--s-text-muted); cursor: pointer;
+}
+.confirmLogout {
+  flex: 1; padding: 11px; background: #ef4444; border: none; border-radius: 10px;
+  font-size: 14px; font-weight: 600; color: #fff; cursor: pointer;
+}
+
+.version { text-align: center; font-size: 12px; color: #d1d5db; padding: 8px 0 20px; }

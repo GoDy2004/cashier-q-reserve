@@ -1,0 +1,76 @@
+.page { min-height: 100vh; background: var(--s-bg); }
+.loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.spinner { width: 32px; height: 32px; border: 3px solid #ede9fe; border-top-color: var(--s-primary-light); border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 52px 16px 16px;
+  background: #fff; border-bottom: 1px solid var(--s-border);
+}
+.header h1 { font-size: 17px; font-weight: 700; color: var(--s-text); }
+.back, .refresh {
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: #f5f3ff; color: var(--s-primary-light);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+.content { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+
+.cashierCard {
+  background: #fff; border-radius: var(--radius-lg); padding: 24px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.cashierUni  { font-size: 13px; font-weight: 700; color: var(--s-text); }
+.cashierName { font-size: 11px; color: var(--s-text-muted); margin-bottom: 16px; }
+.nowLabel    { font-size: 12px; color: var(--s-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.nowNum      { font-size: 52px; font-weight: 800; color: var(--s-primary-light); font-family: var(--font-mono); letter-spacing: -2px; }
+.nowTime     { font-size: 13px; color: var(--s-text-muted); margin-top: 4px; }
+
+.myQueueCard { background: #fff; border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow); }
+.myQueueLabel { font-size: 12px; color: var(--s-text-muted); }
+.myQueueNum  { font-size: 36px; font-weight: 800; color: var(--s-primary-light); font-family: var(--font-mono); margin: 4px 0 16px; }
+
+.progress { display: flex; align-items: center; margin-bottom: 10px; }
+.progressDot {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; flex-shrink: 0;
+}
+.done    { background: var(--s-primary-light); color: #fff; }
+.active  { background: var(--s-primary-light); color: #fff; animation: pulse 1.5s infinite; }
+.pending { background: #e5e7eb; color: #9ca3af; }
+.progressLine { flex: 1; height: 2px; background: #e5e7eb; }
+
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
+
+.nextLine   { font-size: 13px; color: var(--s-text-muted); margin-bottom: 16px; }
+.waitStats  { display: flex; background: #f5f3ff; border-radius: 12px; padding: 14px 20px; margin-bottom: 16px; }
+.waitStat   { flex: 1; text-align: center; }
+.waitNum    { display: block; font-size: 20px; font-weight: 800; color: var(--s-primary-light); }
+.waitLabel  { font-size: 11px; color: var(--s-text-muted); }
+.waitDivider{ width: 1px; height: 32px; background: #ddd6fe; margin: 0 12px; }
+
+.reminder {
+  display: flex; gap: 12px; background: #fafafa;
+  border: 1px solid var(--s-border); border-radius: 10px; padding: 14px;
+  margin-bottom: 16px;
+}
+.reminderIcon  { font-size: 20px; }
+.reminderTitle { font-size: 13px; font-weight: 600; color: var(--s-text); margin-bottom: 2px; }
+.reminderText  { font-size: 12px; color: var(--s-text-muted); line-height: 1.5; }
+
+.cancelBtn {
+  width: 100%; padding: 13px;
+  background: transparent; border: 1.5px solid #d1d5db;
+  border-radius: 12px; font-size: 14px; font-weight: 600;
+  color: var(--s-text-muted); cursor: pointer; transition: all 0.2s;
+}
+.cancelBtn:hover { border-color: #ef4444; color: #ef4444; background: #fee2e2; }
+
+.noQueue { background: #fff; border-radius: var(--radius); padding: 32px; text-align: center; }
+.noQueue p { color: var(--s-text-muted); margin-bottom: 12px; }
+.reserveBtn {
+  padding: 11px 24px; background: var(--s-primary-light); color: #fff;
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+}

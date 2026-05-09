@@ -1,0 +1,95 @@
+.page { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+.title  { font-size: 22px; font-weight: 800; color: var(--a-text); }
+
+.filterRow { display: flex; gap: 6px; }
+.filterBtn {
+  padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 500;
+  border: 1.5px solid var(--a-border); background: #fff; color: var(--a-text-muted); cursor: pointer; transition: all 0.15s;
+}
+.filterActive { background: var(--a-primary-light); color: #fff; border-color: var(--a-primary-light); }
+
+.cols { display: grid; grid-template-columns: 320px 1fr; gap: 20px; }
+@media(max-width:900px){ .cols { grid-template-columns: 1fr; } }
+
+/* List col */
+.listCard { background: #fff; border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+.listItem {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-bottom: 1px solid var(--a-border);
+  cursor: pointer; transition: background 0.15s;
+}
+.listItem:last-child { border-bottom: none; }
+.listItem:hover { background: #f8fafc; }
+.listItemActive { background: #eff6ff !important; border-left: 3px solid var(--a-primary-light); }
+
+.listLeft    { display: flex; gap: 10px; align-items: center; }
+.listAvatar  {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--a-primary-light); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0;
+}
+.listName    { font-size: 13px; font-weight: 600; color: var(--a-text); }
+.listService { font-size: 12px; color: var(--a-text-muted); margin-top: 1px; }
+.listAmount  { font-size: 12px; font-weight: 700; color: #10b981; margin-top: 2px; }
+.empty       { text-align: center; color: var(--a-text-muted); padding: 28px; font-size: 13px; }
+
+/* Detail */
+.detailCard {
+  background: #fff; border-radius: 14px; padding: 24px; box-shadow: var(--shadow);
+}
+.detailCols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 24px; }
+@media(max-width:700px){ .detailCols { grid-template-columns: 1fr; } }
+
+.detailSectionTitle { font-size: 14px; font-weight: 700; color: var(--a-text); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--a-border); }
+.detailRow    { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+.detailRow:last-child { border-bottom: none; }
+.detailLabel  { font-size: 12px; color: var(--a-text-muted); }
+.detailValue  { font-size: 12px; font-weight: 600; color: var(--a-text); text-align: right; max-width: 55%; }
+
+.attachLink { font-size: 12px; color: var(--a-text-muted); }
+.viewLink   { background: none; border: none; color: var(--a-primary-light); font-size: 12px; font-weight: 600; cursor: pointer; }
+.viewLink:hover { text-decoration: underline; }
+
+/* Badges */
+.badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 99px; }
+.pending  { background: #fef3c7; color: #92400e; }
+.verified { background: #d1fae5; color: #065f46; }
+.rejected { background: #fee2e2; color: #991b1b; }
+
+/* Actions */
+.actionRow { display: flex; gap: 10px; flex-wrap: wrap; }
+.verifyBtn {
+  flex: 1; min-width: 140px; padding: 12px; background: #10b981; color: #fff;
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: all 0.2s;
+}
+.verifyBtn:hover:not(:disabled) { background: #059669; }
+.verifyBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.rejectBtn {
+  flex: 1; min-width: 140px; padding: 12px; background: #ef4444; color: #fff;
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.rejectBtn:hover:not(:disabled) { background: #dc2626; }
+.rejectBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.cancelBtn {
+  padding: 12px 20px; background: #f3f4f6; color: var(--a-text-muted);
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+
+.resolvedBanner {
+  background: #f8fafc; border-radius: 10px; padding: 14px;
+  text-align: center; font-size: 14px; font-weight: 600; color: var(--a-text-muted);
+}
+
+.emptyDetail {
+  background: #fff; border-radius: 14px; padding: 60px 24px;
+  text-align: center; box-shadow: var(--shadow);
+  color: var(--a-text-muted);
+}
+.emptyDetail span { font-size: 40px; display: block; margin-bottom: 10px; }
+.emptyDetail p { font-size: 14px; }

@@ -1,0 +1,87 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* Sizes */
+.sm  { padding: 6px 14px;  font-size: 13px; border-radius: 8px; }
+.md  { padding: 11px 22px; font-size: 14px; }
+.lg  { padding: 14px 28px; font-size: 16px; border-radius: 12px; }
+.full { width: 100%; }
+
+/* Variants — Student purple */
+.primary {
+  background: var(--s-primary-light);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(124,58,237,0.35);
+}
+.primary:hover:not(:disabled) {
+  background: var(--s-primary-dark);
+  box-shadow: 0 6px 20px rgba(124,58,237,0.45);
+  transform: translateY(-1px);
+}
+
+.secondary {
+  background: #ede9fe;
+  color: var(--s-primary-light);
+}
+.secondary:hover:not(:disabled) { background: #ddd6fe; }
+
+.outline {
+  background: transparent;
+  border: 1.5px solid var(--s-primary-light);
+  color: var(--s-primary-light);
+}
+.outline:hover:not(:disabled) { background: #f5f3ff; }
+
+.ghost {
+  background: transparent;
+  color: var(--s-text-muted);
+}
+.ghost:hover:not(:disabled) { background: #f3f4f6; color: var(--s-text); }
+
+.danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.danger:hover:not(:disabled) { background: #fecaca; }
+
+.danger-solid {
+  background: #ef4444;
+  color: #fff;
+}
+.danger-solid:hover:not(:disabled) { background: #dc2626; }
+
+/* Admin blue variant */
+.admin-primary {
+  background: var(--a-primary-light);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.admin-primary:hover:not(:disabled) { background: #1d4ed8; transform: translateY(-1px); }
+
+.admin-success {
+  background: #10b981;
+  color: #fff;
+}
+.admin-success:hover:not(:disabled) { background: #059669; }
+
+/* Spinner */
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

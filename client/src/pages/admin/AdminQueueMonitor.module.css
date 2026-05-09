@@ -1,0 +1,79 @@
+.page { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.title  { font-size: 22px; font-weight: 800; color: var(--a-text); }
+
+.resetBtn {
+  padding: 9px 18px; background: #fee2e2; color: #dc2626;
+  border: 1.5px solid #fca5a5; border-radius: 10px;
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.resetBtn:hover { background: #fecaca; }
+
+.cols { display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+@media(max-width:900px){ .cols { grid-template-columns: 1fr; } }
+
+/* Left */
+.leftCol { display: flex; flex-direction: column; gap: 16px; }
+
+.servingCard {
+  background: #fff; border-radius: 14px; padding: 24px; box-shadow: var(--shadow);
+  text-align: center;
+}
+.servingLabel  { font-size: 11px; font-weight: 700; color: var(--a-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.servingNum    { font-size: 52px; font-weight: 800; color: var(--a-primary-light); font-family: var(--font-mono); letter-spacing: -2px; margin: 8px 0 4px; }
+.servingName   { font-size: 14px; font-weight: 600; color: var(--a-text); }
+.servingTime   { font-size: 12px; color: var(--a-text-muted); margin-top: 2px; }
+.servingService{ font-size: 12px; color: var(--a-text-muted); margin-bottom: 16px; }
+
+.nextBtn {
+  width: 100%; padding: 13px; background: var(--a-primary-light); color: #fff;
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer;
+  transition: all 0.2s; box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.nextBtn:hover:not(:disabled) { background: #1d4ed8; transform: translateY(-1px); }
+.nextBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.statsCard {
+  background: #fff; border-radius: 14px; padding: 18px; box-shadow: var(--shadow);
+}
+.statsTitle { font-size: 13px; font-weight: 700; color: var(--a-text); margin-bottom: 12px; }
+.statRow    { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--a-border); }
+.statRow:last-child { border-bottom: none; }
+.statLabel  { font-size: 13px; color: var(--a-text-muted); }
+.statVal    { font-size: 13px; font-weight: 700; color: var(--a-text); }
+
+.nextCard {
+  background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 14px; padding: 16px;
+}
+.nextLabel { font-size: 11px; font-weight: 700; color: var(--a-primary-light); text-transform: uppercase; letter-spacing: 0.5px; }
+.nextNum   { font-size: 24px; font-weight: 800; color: var(--a-primary-light); font-family: var(--font-mono); margin: 4px 0; }
+.nextName  { font-size: 13px; font-weight: 600; color: var(--a-text); }
+.nextTime  { font-size: 12px; color: var(--a-text-muted); }
+
+/* Right */
+.listCard { background: #fff; border-radius: 14px; padding: 20px; box-shadow: var(--shadow); }
+.listTitle { font-size: 16px; font-weight: 700; color: var(--a-text); margin-bottom: 16px; }
+
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; white-space: nowrap; }
+.table th {
+  text-align: left; padding: 10px 12px; font-size: 11px; font-weight: 700;
+  color: var(--a-text-muted); text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--a-border); background: #f8fafc;
+}
+.table td { padding: 11px 12px; border-bottom: 1px solid var(--a-border); vertical-align: middle; }
+.table tr:hover td { background: #f8fafc; }
+.activeRow td { background: #eff6ff !important; }
+.qNum    { font-family: var(--font-mono); font-weight: 700; color: var(--a-primary-light); background: #dbeafe; padding: 3px 8px; border-radius: 6px; }
+.service { color: var(--a-text-muted); font-size: 12px; }
+.time    { color: var(--a-text-muted); font-size: 12px; }
+.empty   { text-align: center; color: var(--a-text-muted); padding: 24px 0; }
+
+.skipBtn {
+  padding: 5px 12px; background: #fef3c7; color: #92400e;
+  border: 1px solid #fde68a; border-radius: 6px;
+  font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s;
+}
+.skipBtn:hover { background: #fde68a; }
